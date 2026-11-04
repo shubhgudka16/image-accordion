@@ -1,99 +1,157 @@
-# 🖼️ Image Accordion Website
+<div align="center">
 
-A modern and responsive **Image Accordion UI** built using HTML and CSS.
-The accordion expands smoothly when a card is selected, creating an interactive image gallery effect.
+# 🖼️ Image Accordion
 
-This project is useful for learning:
+### A smooth, interactive image accordion built with **pure HTML & CSS** — no JavaScript required.
 
-* Flexbox
-* CSS transitions
-* Responsive layouts
-* Interactive UI design
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![No JS](https://img.shields.io/badge/JavaScript-Not%20Needed-success?style=for-the-badge&logo=javascript&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
----
+[🔴 Live Demo](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/) · [🐛 Report Bug](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues) · [✨ Request Feature](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues)
 
-## 🚀 Features
+<br>
 
-* Smooth accordion animation
-* Interactive image cards
-* Responsive design
-* Modern UI with gradients
-* Pure HTML & CSS implementation
+<img src="assets/preview.gif" alt="Image Accordion Preview" width="800">
+
+</div>
 
 ---
 
-## 🛠 Technologies Used
+## 📖 About The Project
 
-* HTML5
-* CSS3
+**Image Accordion** is a beginner-friendly front-end project that displays four beautiful landscape cards representing different times of the day. Click on any card and it smoothly expands to reveal its title and description, while the other cards shrink to make room.
 
----
+The whole interaction is powered by the **CSS radio-button hack** (`input:checked + label`) — so the animation works without writing a single line of JavaScript.
+
+## ✨ Features
+
+- 🎨 **Pure CSS interaction** — expand/collapse using hidden radio inputs
+- 🌅 **Four themed cards** — Morning, Midday, Evening, Night
+- 🎞️ **Smooth animation** using `cubic-bezier` transitions
+- 🌈 **Gradient background** with soft card shadows and rounded corners
+- 🖱️ **Click-to-expand** with only one card open at a time
+- 🪶 **Lightweight** — just one HTML file and one CSS file
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Page structure, radio inputs & labels |
+| **CSS3** | Flexbox layout, transitions, gradients, sibling selectors |
 
 ## 📂 Project Structure
 
-```bash id="6c8ttf"
-Image-Accordion/
+```
+image-accordion/
 │
-├── index.html
-├── image.css
-├── script.js
-└── README.md
+├── 📄 index.html      # Markup for the accordion cards
+├── 🎨 image.css       # All styling and animations
+├── 📜 script.js       # (Optional / currently unused)
+├── 📁 assets/
+│   └── preview.gif    # Screenshot / demo GIF for the README
+└── 📘 README.md
 ```
 
----
+## 🚀 Getting Started
 
-## ▶️ How to Run
+### Prerequisites
 
-### 1️⃣ Clone the Repository
+You only need a web browser (Chrome, Firefox, Edge, Safari). An internet connection is required to load the background images.
 
-```bash id="nmup8m"
-git clone https://github.com/your-username/image-accordion.git
+### Installation & Usage
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+   ```
+
+2. **Go to the project folder**
+   ```bash
+   cd YOUR-REPO-NAME
+   ```
+
+3. **Open the project**
+   - Double-click `index.html`, **or**
+   - Right-click → *Open with* → your browser, **or**
+   - Use the **Live Server** extension in VS Code
+
+4. **Click any card** to expand it and see the animation in action! 🎉
+
+## 🎯 How It Works
+
+```html
+<input type="radio" name="slide" id="c1" checked>
+<label for="c1" class="card"> ... </label>
 ```
 
-### 2️⃣ Open the Project Folder
+```css
+input { display: none; }
 
-```bash id="pc1mr6"
-cd image-accordion
+input:checked + label {
+  width: 600px;           /* the selected card grows */
+}
+
+input:checked + label .description {
+  opacity: 1;             /* its text fades in */
+}
 ```
 
-### 3️⃣ Run the Project
+1. Each card is a `<label>` linked to a hidden radio `<input>`.
+2. Radio buttons in the same group allow **only one** selection at a time.
+3. The `:checked` selector with the `+` sibling combinator widens the selected card.
+4. The `transition` property makes the resize smooth.
 
-Open `index.html` in your browser.
+## 🎨 Customization
 
----
+- **Change images** — edit the `background-image` URLs for `#one`, `#two`, `#three`, `#four` in `image.css`.
+- **Change text** — update the `<h4>` and `<p>` inside each card in `index.html`.
+- **Change expanded width** — modify `input:checked + label { width: 600px; }`.
+- **Change colors** — tweak the `body` gradient in `image.css`.
+- **Add more cards** — copy one `input` + `label` block, give it a new `id`, and add a matching background image.
 
-## 💻 Features Preview
+## 🗺️ Roadmap
 
-* 🌅 Morning Card
-* ☀️ Midday Card
-* 🌇 Evening Card
-* 🌃 Night Card
+- [x] Basic accordion with 4 cards
+- [x] Smooth CSS transitions
+- [ ] Make it fully responsive for mobile screens
+- [ ] Add keyboard navigation
+- [ ] Add hover effects on collapsed cards
+- [ ] Store images locally for offline use
 
-Each card expands with a smooth transition when selected.
+## 🤝 Contributing
 
----
+Contributions, issues and feature requests are welcome!
 
-## 🧠 Concepts Used
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m "Add some AmazingFeature"`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-* Flexbox Layout
-* CSS Animations
-* CSS Transitions
-* Background Images
-* Radio Button Interactions
+## 📜 License
 
----
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
-## 📌 Future Improvements
+## 🙏 Acknowledgements
 
-* Add JavaScript animations
-* Make it fully mobile responsive
-* Add hover effects
-* Add dynamic image loading
-
----
+- Wallpapers from [HDQWalls](https://hdqwalls.com), [HDWallpapers](https://www.hdwallpapers.in) and [Rare Gallery](https://rare-gallery.com)
+- [Shields.io](https://shields.io) for the badges
 
 ## 👨‍💻 Author
 
-Shubh Gudka
-Diploma Computer Engineering Student
-Learning Web Development and AI/ML 🚀
+**Shubh**
+Diploma in Computer Engineering Student · Government Polytechnic, Jamnagar
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR-USERNAME)
+
+---
+
+<div align="center">
+
+⭐ **If you liked this project, give it a star!** ⭐
+
+*This was one of my first projects as a beginner — and I'm proud of how far I've come.* 🚀
+
+</div>
