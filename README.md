@@ -9,8 +9,7 @@
 ![No JS](https://img.shields.io/badge/JavaScript-Not%20Needed-success?style=for-the-badge&logo=javascript&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-[🔴 Live Demo](https://shubhgudka16.github.io/image-accordion
-P/) · [🐛 Report Bug](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues) · [✨ Request Feature](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues)
+[🔴 Live Demo](https://shubhgudka16.github.io/image-accordion/) · [🐛 Report Bug](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues) · [✨ Request Feature](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/issues)
 
 <br>
 
